@@ -1,5 +1,6 @@
 import '../App.css'
 import MostPopular from '../components/MostPopular'
+import BucketList from '../components/BucketList'
 
 const mockData = [
   {
@@ -28,6 +29,33 @@ const mockData = [
   }
 ]
 
+const bucketListData = [
+  {
+    img: 'https://i.imgur.com/bzOxL6z.png',
+    location: 'Japan'
+  },
+  {
+    img: 'https://i.imgur.com/QZIXUe7.png',
+    location: 'England'
+  },
+  {
+    img: 'https://i.imgur.com/cHvMxmP.png',
+    location: 'Indonesia'
+  },
+  {
+    img: 'https://i.imgur.com/k45oJbR.png',
+    location: 'Thailand'
+  },
+  {
+    img: 'https://i.imgur.com/g9d4P5b.png',
+    location: 'South Korea'
+  },
+  {
+    img: 'https://i.imgur.com/US1QuTn.png',
+    location: 'China'
+  }
+]
+
 const HomePage = () => {
   return (
     <div>
@@ -49,6 +77,9 @@ const HomePage = () => {
         </div>
       </div>
 
+
+
+
       <div id="mostpopular-container">
         <p className="section-title">Most Popular</p>
        <ul className="cardsandname-container" id="popular-container">
@@ -62,21 +93,29 @@ const HomePage = () => {
         })}
        </ul>
       </div>
-      {/* <div className="cards-container" id="bucketlist-container">
+      
+
+
+
+      <div className="cards-container" id="bucketlist-container">
         <div id="textplus-container">
           <p id="bucketlist-text" className="card-name">
             My Bucket List
           </p>
           <p id="plus-sign">+</p>
         </div>
-        <div className="cardsandname-container">
-          <img
-            src="https://i.imgur.com/YGXG1vC.png"
-            id="bucketlist-card"
-            className="card"
-          />
-        </div>
-      </div> */}
+      <ul className="cardsandname-container" id="card-img">
+        {bucketListData.map((bucketItem) => {
+          return (
+            <BucketList 
+            img={bucketItem.img}
+            location={bucketItem.location}
+            />
+          )
+        })}
+      </ul>
+  
+      </div>
     </div>
   )
 }

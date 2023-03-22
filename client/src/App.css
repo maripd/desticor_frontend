@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 10px;
 }
 
 #header-container {
@@ -67,7 +68,7 @@
 
 #blurbsearch-container {
   text-align: left;
-  margin: 10px;
+  margin: 30px;
 }
 
 #searchbar-container {
@@ -75,10 +76,74 @@
   justify-content: center;
 }
 #search-input {
-  width: 300px;
-  height: 25px;
+  width: 350px;
+  height: 30px;
   border-radius: 6px;
   border: none;
   background-color: rgba(234, 234, 234, 0.411);
   box-shadow: 4px 5px 4px rgba(235, 235, 235, 0.61);
+}
+
+
+
+
+
+.cardsandname-container {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  margin: auto 20px;
+  padding: 0;
+}
+
+.section-title {
+  text-align: left;
+  margin: 10px 30px;
+  font-weight: bold;
+}
+#textplus-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 30px;
+  position: relative;
+    top: 10px;
+}
+#plus-sign {
+  margin-left: 10px;
+  background-color: rgb(244, 214, 219);
+  padding: 4px 8px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+#bucketlist-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#bucketlist-text {
+  display: flex;
+  align-self: center;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 130px;
+  margin: 5px;
+  border-radius: 7px;
+  list-style-type: none ;
+  display: flex;
+  justify-content: center;
+}
+
+.card-text {
+  position: absolute;
+  top: 77%;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  overflow-x: scroll;
+  z-index: 1;
 }

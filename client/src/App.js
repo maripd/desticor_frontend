@@ -1,7 +1,7 @@
 import './App.css'
 import HomePage from './pages/HomePage'
-import DestinationDetails from './pages/DestinationDetails'
 import BucketListView from './pages/BucketListView'
+import DestinationDetails from './pages/DestinationDetails'
 import LandingPage from './pages/LandingPage'
 import LoginView from './pages/LoginView'
 import RegistrationForm from './pages/RegistrationForm'

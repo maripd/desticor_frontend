@@ -1,4 +1,5 @@
-import '../App.css'
+import './bucketlist.css'
+
 const BucketList = (props) => {
   return (
     <>

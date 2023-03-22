@@ -1,0 +1,37 @@
+#textplus-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 30px;
+  position: relative;
+    top: 10px;
+}
+#plus-sign {
+  margin-left: 10px;
+  background-color: rgb(244, 214, 219);
+  padding: 4px 8px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+#bucketlist-container {
+  display: flex;
+  flex-direction: column;
+}
+#bucketlist-text {
+  display: flex;
+  align-self: center;
+}
+.card {
+  position: relative;
+  list-style-type: none ;
+  display: flex;
+  justify-content: center;
+}
+.card-img {
+  width: 140px;
+  height: 180px;
+  margin: 8px;
+  border-radius: 7px;
+}
+#bucketlist-text {
+  font-weight:bolder;
+}

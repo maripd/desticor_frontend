@@ -31,10 +31,6 @@ const mockData = [
 
 const bucketListData = [
   {
-    img: 'https://i.imgur.com/bzOxL6z.png',
-    location: 'Japan'
-  },
-  {
     img: 'https://i.imgur.com/QZIXUe7.png',
     location: 'England'
   },
@@ -53,6 +49,10 @@ const bucketListData = [
   {
     img: 'https://i.imgur.com/US1QuTn.png',
     location: 'China'
+  },
+  {
+    img: 'https://i.imgur.com/bzOxL6z.png',
+    location: 'Japan'
   }
 ]
 
@@ -71,31 +71,21 @@ const HomePage = () => {
         <p id="intro-blurb">
           Explore the world <br /> with us!
         </p>
-        {/* use background on css, for the search icon in input */}
         <div id="searchbar-container">
           <input type="text" id="search-input" />
         </div>
       </div>
 
-
-
-
       <div id="mostpopular-container">
         <p className="section-title">Most Popular</p>
-       <ul className="cardsandname-container" id="popular-container">
-        {mockData.map((mockItem) => {
-          return (
-            <MostPopular
-            img={mockItem.img}
-            location={mockItem.location}/>
-          )
-          
-        })}
-       </ul>
+        <ul className="cardsandname-container" id="popular-container">
+          {mockData.map((mockItem) => {
+            return (
+              <MostPopular img={mockItem.img} location={mockItem.location} />
+            )
+          })}
+        </ul>
       </div>
-      
-
-
 
       <div className="cards-container" id="bucketlist-container">
         <div id="textplus-container">
@@ -104,17 +94,13 @@ const HomePage = () => {
           </p>
           <p id="plus-sign">+</p>
         </div>
-      <ul className="cardsandname-container" id="card-img">
-        {bucketListData.map((bucketItem) => {
-          return (
-            <BucketList 
-            img={bucketItem.img}
-            location={bucketItem.location}
-            />
-          )
-        })}
-      </ul>
-  
+        <ul className="cardsandname-container" id="card-img">
+          {bucketListData.map((bucketItem) => {
+            return (
+              <BucketList img={bucketItem.img} location={bucketItem.location} />
+            )
+          })}
+        </ul>
       </div>
     </div>
   )

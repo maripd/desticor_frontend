@@ -1,4 +1,4 @@
-import '../App.css'
+import './mostpopular.css'
 const MostPopular = (props) => {
   return (
     <>

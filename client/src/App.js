@@ -1,10 +1,21 @@
 import './App.css'
-import HomePage from './pages/HomePage.jsx'
+import HomePage from './pages/HomePage'
+import { Routes, Route } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import React from 'react'
 
 const App = () => {
   return (
     <div className="App">
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/destinationdetails:id" element={<DestinationDetails />} />
+        <Route path="/bucketlistview:id" element={<BucketListView />} />
+        <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/loginview" element={<LoginView />} />
+        <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/review:id" element={<ReviewView />} />
+      </Routes>
     </div>
   )
 }

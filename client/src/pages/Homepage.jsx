@@ -1,7 +1,7 @@
 import '../App.css'
 import MostPopular from '../components/MostPopular'
 import BucketList from '../components/BucketList'
-import AddBucketList from './AddBucketList'
+import AddBucketList from '../components/AddBucketList'
 
 const mockData = [
   {

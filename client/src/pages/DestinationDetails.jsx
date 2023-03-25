@@ -1,4 +1,5 @@
 import './destinationdetails.css'
+import BucketListDropdown from '../components/BucketListDropdown'
 
 const DestinationDetails = () => {
 
@@ -16,8 +17,10 @@ const DestinationDetails = () => {
       <div className="details-background">
         <p className="country-name">USA</p>
         <p className="state-name">San Francisco, CA</p>
+        <p className="bucketlist-name">MY BUCKET LIST</p>
+        <BucketListDropdown />
       </div>
-   {/* bucketlist dropdown component here */}
+      
     </div>
   )
 }

@@ -11,7 +11,9 @@ const LandingPage = () => {
         </div>
 
         <div className="over">
-          <button className="logbtn">Login</button>
+          <a href="/loginview">
+            <button className="logbtn">Login</button>
+          </a>
           <a href="/register" id="reg">
             create an account
           </a>

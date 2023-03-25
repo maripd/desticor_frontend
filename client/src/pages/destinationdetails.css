@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  background-image: url(https://i.imgur.com/kcm7btt.png);
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.nav-icon {
+  width: 60px;
+  height: 55px;
+}
+
+.logo-icon {
+  width: 70px;
+  height: 70px;
+}
+#destinationpage-container {
+  
+  /* background: linear-gradient(to top,rgba(235, 79, 131, 0.244), rgba(244, 154, 169, 0.663), rgba(249, 188, 208, 0.775)); */
+}
+
+#toptext-container {
+  margin: 35px auto;
+}
+h1 {
+  margin: 0 40px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+  font-size: 35px;
+  text-shadow: 2px 3px 5px #0000006b;
+}
+
+h3 {
+  color: white;
+  text-shadow: 1px 3px 7px #0000006b;
+}
+
+.details-background {
+  background-color: #ebc5b99f;
+  height: 350px;
+  width: 100%;
+  border-radius: 70px;
+  position: absolute;
+  left: 15%;
+  bottom: 9%;
+}
+
+.country-name {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  margin: 58px 0 0 50px;
+}
+.state-name {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: left;
+  margin: 20px 0 0 50px;
+}

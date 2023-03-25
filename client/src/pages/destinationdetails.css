@@ -1,10 +1,10 @@
-body {
+/* body {
   margin: 0;
   background-image: url(https://i.imgur.com/kcm7btt.png);
   background-size: 180%;
   background-repeat: no-repeat;
   background-position: center 0;
-}
+} */
 
 #nav-container {
   display: flex;

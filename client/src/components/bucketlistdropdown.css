@@ -6,8 +6,8 @@
 }
 
 .choose-btn {
-  width: 297px;
-  margin: 20px 0 0 20px;
+  width: 290px;
+  margin: 20px 0 0 36px;
   font-weight: bold;
   color: white;
   background-color: #f0a8b400;
@@ -16,8 +16,9 @@
   border: none;
   background-image: url('https://i.imgur.com/4m4KsbO.png');
   background-repeat: no-repeat;
-  background-size: 19px;
+  background-size: 17px;
   background-position: right;
+  border-radius: 10px;
 }
 .choose-btn:hover {
   background-color: rgba(249, 207, 214, 0.698);

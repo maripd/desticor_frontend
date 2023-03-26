@@ -5,11 +5,31 @@
 #title {
   text-align: left;
   margin: 20px 25px;
+  font-size: 20px;
 }
 
-#card-container {
+.card-container {
   background-color: rgba(249, 226, 234, 0.917);
   height: 100vh;
   border-top-left-radius: 61px;
   border-top-right-radius: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+}
+
+.bucketlist-img {
+  width: 325px;
+  height: 190px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 9px gray;
+}
+.img-text {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  bottom: 9%;
+  font-weight: bold;
+  font-size: 30px;
 }

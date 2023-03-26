@@ -1,9 +1,8 @@
 #textplus-container {
   display: flex;
   flex-direction: row;
-  margin: 0 30px;
+  margin-left: 30px;
   position: relative;
-    top: 10px;
 }
 #plus-sign {
   margin-left: 10px;
@@ -19,6 +18,7 @@
 #bucketlist-text {
   display: flex;
   align-self: center;
+  font-size: 13px;
 }
 .card {
   position: relative;

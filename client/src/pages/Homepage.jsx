@@ -1,6 +1,7 @@
 import '../App.css'
 import MostPopular from '../components/MostPopular'
 import BucketList from '../components/BucketList'
+import AddBucketList from '../components/AddBucketList'
 
 const mockData = [
   {
@@ -93,6 +94,7 @@ const HomePage = () => {
             My Bucket List
           </p>
           <p id="plus-sign">+</p>
+          <AddBucketList/>
         </div>
         <ul className="cardsandname-container" id="card-img">
           {bucketListData.map((bucketItem) => {

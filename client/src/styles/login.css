@@ -1,0 +1,29 @@
+.bgc {
+  background-image: url("https://media.architecturaldigest.com/photos/5b8707a9a9a1d736ef93a1c7/master/w_1920%2Cc_limit/GettyImages-464320263.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(255, 253, 253, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  margin-top: 420px;
+  margin-left: 70px;
+  margin-left: 90px;
+}
+.info {
+  margin-top: 33px;
+  padding: 30px;
+  border-radius: 50px;
+}
+.btn {
+  display: flex;
+  gap: 10px;
+}

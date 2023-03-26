@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -59,11 +63,11 @@
 }
 
 #intro-blurb {
- font-family: arial;
- text-align: left;
- font-size: 30px;
- font-weight: 700;
- text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  font-family: arial;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
 }
 
 #blurbsearch-container {
@@ -82,10 +86,9 @@
   border: none;
   background-color: rgba(211, 210, 210, 0.411);
   box-shadow: 4px 5px 4px rgba(246, 245, 245, 0.61);
-  background-image: url('https://i.imgur.com/WA3wqnM.png');
-  background-size: 25px 25px ;
+  background-image: url("https://i.imgur.com/WA3wqnM.png");
+  background-size: 25px 25px;
   background-repeat: no-repeat;
   background-position: right;
   background-origin: content-box;
 }
-

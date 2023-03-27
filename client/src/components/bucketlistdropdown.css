@@ -14,11 +14,12 @@
   padding: 9px;
   font-size: 21px;
   border: none;
-  background-image: url('https://i.imgur.com/4m4KsbO.png');
-  background-repeat: no-repeat;
-  background-size: 17px;
-  background-position: right;
   border-radius: 10px;
+}
+#dropdown-arrow {
+  width: 18px;
+  height: 18px;
+  vertical-align: bottom;
 }
 .choose-btn:hover {
   background-color: rgba(249, 207, 214, 0.698);

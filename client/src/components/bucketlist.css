@@ -1,7 +1,7 @@
 #textplus-container {
   display: flex;
   flex-direction: row;
-  margin: 10px 0 0 30px;
+  margin: 10px 0 10px 30px;
   position: relative;
 }
 #plus-sign {

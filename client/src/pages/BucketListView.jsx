@@ -1,15 +1,21 @@
 import './bucketlistview.css'
 import '../components/headerlogonav.css'
 import HeaderLogoNav from '../components/HeaderLogoNav'
-
+import { useNavigate } from 'react-router-dom'
 
 const BucketListView = () => {
+  const navigate = useNavigate()
+
+  const handleCard = (e) => {
+    navigate('/review:id')
+  }
+
   return (
     <div className="bucketlist-container">
       <HeaderLogoNav />
       <h5 id="title">Bucket List Name</h5>
       
-      <div className="card-container">
+      <div className="card-container" onClick={handleCard}>
         <img src="https://i.imgur.com/eoRserg.png" className="bucketlist-img"/>
         <p className="img-text">Denmark</p>
 

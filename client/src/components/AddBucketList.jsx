@@ -12,13 +12,17 @@ const handleSubmit = async (e) => {
   const response = await axios.post( '/createbucketlist', {
     bucketListName: bucketListNameData,
   })
-  setBucketListName()
-  console.log('')
+  console.log('TEST')
+}
+
+const handleAddBucketName = (e) => {
+  setBucketListName(e.target.value)
+  console.log('This is the new bucket!', e.target.value)
 }
   return (
     <>
       <form id="addbucketform-container">
-        <input type="text" value={bucketListNameData} placeholder="name of bucket list" id="addbucket-input"/>
+        <input type="text" value={bucketListNameData} onChange={(e) => handleAddBucketName(e, 'new bucket name')} placeholder="name of bucket list" id="addbucket-input"/>
         <button type="submit" id="submit-bucket" onClick={handleSubmit}>Submit</button>
       </form>
     </>

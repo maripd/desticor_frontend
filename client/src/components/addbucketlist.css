@@ -14,10 +14,15 @@
 }
 
 #submit-bucket {
+  width: 55px;
   height: 27px;
   align-self: center;
   border: 1px solid #f0eeee;
-  background-color: #fafafa;
+  background-color: rgb(238 235 235 / 61%);
   border-radius: 7px;
   color: rgb(84, 84, 84);
+}
+
+#submit-bucket:hover {
+  background-color: rgba(236, 175, 185, 0.5);
 }

@@ -9,22 +9,6 @@
   /* background: linear-gradient(to top,rgba(235, 79, 131, 0.244), rgba(244, 154, 169, 0.663), rgba(249, 188, 208, 0.775)); */
 }
 
-#nav-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 15px;
-}
-
-.nav-icon {
-  width: 60px;
-  height: 55px;
-}
-
-.logo-icon {
-  width: 70px;
-  height: 70px;
-}
-
 #toptext-container {
   margin: 35px auto;
 }

@@ -5,6 +5,7 @@
   flex-direction: row;
   margin: auto 20px;
   padding: 0;
+  list-style-type: none;
 }
 
 .section-title {
@@ -14,9 +15,9 @@
   font-size: 13px;
 }
 
-.card {
+.listcard-container {
   position: relative;
-  list-style-type: none ;
+  list-style-type: none;
   display: flex;
   justify-content: center;
 }

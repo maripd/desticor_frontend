@@ -7,7 +7,6 @@ import LoginView from './pages/LoginView'
 import RegistrationForm from './pages/RegistrationForm'
 import ReviewView from './pages/ReviewView'
 import { Routes, Route } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 import React from 'react'
 
 const App = () => {

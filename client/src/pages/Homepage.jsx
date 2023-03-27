@@ -1,4 +1,5 @@
-import '../App.css'
+import './homepage.css'
+import HeaderLogoNav from '../components/HeaderLogoNav'
 import MostPopular from '../components/MostPopular'
 import BucketList from '../components/BucketList'
 import AddBucketList from '../components/AddBucketList'
@@ -61,12 +62,7 @@ const HomePage = () => {
   return (
     <div>
       <header id="header-container">
-        <div id="navlogo-container">
-          <img src="https://i.imgur.com/QWVRsKl.png" id="logo" />
-          <div id="nav-container">
-            <img src="https://i.imgur.com/P9U6WKW.png" id="menu-icon" />
-          </div>
-        </div>
+        <HeaderLogoNav />
       </header>
       <div id="blurbsearch-container">
         <p id="intro-blurb">
@@ -76,6 +72,7 @@ const HomePage = () => {
           <input type="text" id="search-input" />
         </div>
       </div>
+
 
       <div id="mostpopular-container">
         <p className="section-title">Most Popular</p>
@@ -96,6 +93,8 @@ const HomePage = () => {
           <p id="plus-sign">+</p>
           <AddBucketList/>
         </div>
+
+        
         <ul className="cardsandname-container" id="card-img">
           {bucketListData.map((bucketItem) => {
             return (

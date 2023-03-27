@@ -5,13 +5,22 @@ import axios from 'axios'
 
 const AddBucketList = () => {
   const [bucketListNameData, setBucketListName] = useState('')
+  const [cityNameData, setCityName] = useState('')
+  const [countryNameData, setCountryName] = useState('')
+  const [userIdData, setId] = useState('')
+  const [destinationIdData, setdestination] = useState('')
 
 const handleSubmit = async (e) => {
   e.preventDefault()
   console.log('submit button was clicked!')
-  const response = await axios.post( '/createbucketlist', {
+  const response = await axios.post( 'http://localhost:3001/createbucketlist', {
     bucketListName: bucketListNameData,
+    cityName: cityNameData,
+    countryName: countryNameData,
+    userId: userIdData,
+    destinationId: destinationIdData
   })
+  setBucketListName('')
   console.log('TEST')
 }
 

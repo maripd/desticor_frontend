@@ -1,0 +1,16 @@
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+  padding-top: 15px;
+}
+
+.nav-icon {
+  width: 60px;
+  height: 55px;
+}
+
+.logo-icon {
+  width: 70px;
+  height: 70px;
+}

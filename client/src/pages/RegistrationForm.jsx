@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import { useState } from "react";
 import axios from "axios";
@@ -8,23 +8,20 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [register, setRegister] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const configuration = {
-      method: "post",
-      url: "http://localhost:3001/createuser",
-      data: {
+    axios
+      .post("http://localhost:3001/createuser", {
+        firstName,
+        lastName,
         emailAddress,
         password
-      }
-    };
-    axios(configuration)
-      .then((result) => {
-        setRegister(true);
       })
+      .then((result) => navigate("/"))
+
       .catch((error) => {
         error = new Error();
       });
@@ -70,15 +67,10 @@ const RegistrationForm = () => {
               Submit
             </button>
 
-            <Link to="/landingpage">Cancel</Link>
+            <button onClick={() => navigate("/landingpage")}>Cancel</button>
           </div>
         </form>
       </div>
-      {register ? (
-        <p className="text-success">You Are Registered Successfully</p>
-      ) : (
-        <p className="text-danger">You Are Not Registered</p>
-      )}
     </>
   );
 };

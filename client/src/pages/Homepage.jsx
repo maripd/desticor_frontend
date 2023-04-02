@@ -3,6 +3,7 @@ import HeaderLogoNav from '../components/HeaderLogoNav'
 import MostPopular from '../components/MostPopular'
 import BucketList from '../components/BucketList'
 import AddBucketList from '../components/AddBucketList'
+import SearchBar from '../components/SearchBar'
 
 const mockData = [
   {
@@ -64,14 +65,7 @@ const HomePage = () => {
       <header id="header-container">
         <HeaderLogoNav />
       </header>
-      <div id="blurbsearch-container">
-        <p id="intro-blurb">
-          Explore the world <br /> with us!
-        </p>
-        <div id="searchbar-container">
-          <input type="text" id="search-input" />
-        </div>
-      </div>
+      <SearchBar />
 
 
       <div id="mostpopular-container">

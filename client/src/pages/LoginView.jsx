@@ -1,6 +1,13 @@
 import "../styles/login.css";
 import React from "react";
+import { Link } from "react-router-dom";
 const LoginView = () => {
+  const googleAuth = () => {
+    window.open(
+      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+      "_self"
+    );
+  };
   return (
     <>
       <div className="bgc">
@@ -11,8 +18,14 @@ const LoginView = () => {
           </div>
 
           <div className="btn">
-            <a href="/">Submit</a>
-            <a href="/landingpage">Cancel</a>
+            <button>Log In</button>
+            <p>or</p>
+            <button onClick={googleAuth}>Sign In with Google</button>
+            <p>
+              <Link to="/register">Create an Account</Link>
+            </p>
+            <Link to="/">Submit</Link>
+            <Link to="/landingpage">Cancel</Link>
           </div>
         </form>
       </div>

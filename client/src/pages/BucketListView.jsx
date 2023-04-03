@@ -1,5 +1,5 @@
-import './bucketlistview.css'
-import '../components/headerlogonav.css'
+import '../styles/bucketlistview.css'
+import '../styles/headerlogonav.css'
 import HeaderLogoNav from '../components/HeaderLogoNav'
 import { useNavigate } from 'react-router-dom'
 

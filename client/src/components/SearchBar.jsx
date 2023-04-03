@@ -1,4 +1,4 @@
-import './searchbar.css'
+import '../styles/searchbar.css'
 import { useState } from 'react'
 const google = window.google
 const autocompleteService = new google.maps.places.AutocompleteService()

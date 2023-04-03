@@ -1,4 +1,4 @@
-import './destinationdetails.css'
+import '../styles/destinationdetails.css'
 import BucketListDropdown from '../components/BucketListDropdown'
 import HeaderLogoNav from '../components/HeaderLogoNav'
 

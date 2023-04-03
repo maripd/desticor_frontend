@@ -1,4 +1,4 @@
-import './addbucketlist.css'
+import '../styles/addbucketlist.css'
 import { useState} from 'react'
 import axios from 'axios'
 

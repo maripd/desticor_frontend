@@ -1,3 +1,16 @@
+#bgc {
+  background-image: url("https://media.architecturaldigest.com/photos/5b8707a9a9a1d736ef93a1c7/master/w_1920%2Cc_limit/GettyImages-464320263.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  color: white;
+}
 .editor-container {
+  margin-top: 500px;
+  height: 330px;
+  background-color: pink;
   width: auto;
+  color: black;
 }

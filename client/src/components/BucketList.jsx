@@ -1,4 +1,4 @@
-import './bucketlist.css'
+import '../styles/bucketlist.css'
 import { useNavigate } from 'react-router-dom'
 
 

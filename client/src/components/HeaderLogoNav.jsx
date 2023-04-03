@@ -1,4 +1,4 @@
-import './headerlogonav.css'
+import '../styles/headerlogonav.css'
 import { useNavigate } from 'react-router-dom'
 
 const HeaderLogoNav = () => {

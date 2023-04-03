@@ -1,4 +1,4 @@
-import './bucketlistdropdown.css'
+import '../styles/bucketlistdropdown.css'
 
 const BucketListDropdown = () => {
   return (

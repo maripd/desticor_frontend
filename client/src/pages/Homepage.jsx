@@ -1,4 +1,4 @@
-import './homepage.css'
+import '../styles/homepage.css'
 import HeaderLogoNav from '../components/HeaderLogoNav'
 import MostPopular from '../components/MostPopular'
 import BucketList from '../components/BucketList'

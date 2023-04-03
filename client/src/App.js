@@ -1,5 +1,5 @@
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import Homepage from "./pages/Homepage";
 import BucketListView from "./pages/BucketListView";
 import DestinationDetails from "./pages/DestinationDetails";
 import LandingPage from "./pages/LandingPage";
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/destinationdetails:id" element={<DestinationDetails />} />
         <Route path="/bucketlistview:id" element={<BucketListView />} />
         <Route path="/landingpage" element={<LandingPage />} />

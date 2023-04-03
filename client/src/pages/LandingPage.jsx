@@ -5,9 +5,9 @@ const LandingPage = () => {
     <>
       <div id="bgc">
         <div className="intro">
-          <h1>Desticor</h1>
-          <p>Explore the World</p>
-          <p>Anytime, Anywhere</p>
+          <h1 className="intro-name">Desticor</h1>
+          <p className="landing-blurb">Explore the World</p>
+          <p className="landing-blurb">Anytime, Anywhere</p>
         </div>
 
         <div className="over">

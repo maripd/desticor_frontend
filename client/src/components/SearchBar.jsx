@@ -2,10 +2,12 @@ import './searchbar.css'
 import { useState } from 'react'
 const google = window.google
 const autocompleteService = new google.maps.places.AutocompleteService()
+const placesService = new google.maps.places.PlacesService(document.createElement('div'))
 
 const SearchBar = () => {
   const [inputValues, setInput] = useState('')
   const [predictions, setPredictions] = useState([])
+  const [photo, setPhoto] = useState(null)
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -26,6 +28,22 @@ const SearchBar = () => {
       }
     )
   }
+
+  const handleCityClick = (placeId) => {
+    placesService.getDetails(
+      { placeId: placeId, fields: ['name', 'photos']},
+      (place, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK && place.photos && place.photos.length > 0) {
+          const photoUrl = place.photos[0].getUrl({
+            maxWidth: 500,
+            maxHeight: 600,
+          })
+          setPhoto(photoUrl)
+        }
+      }
+    )
+  }
+
 
   return (
     <div id="blurbsearch-container">
@@ -49,23 +67,21 @@ const SearchBar = () => {
                     onClick={() => {
                       setInput(predictionItem.description)
                       setPredictions([])
+                      handleCityClick(predictionItem.place_id)
                     }}
                   >
                     {predictionItem.description}
                   </p>
-                  {predictionItem.photos && (
-                    <img
-                      src={predictionItem.photos[0].getUrl()}
-                      alt={predictionItem.description}
-                    />
-                  )}
                 </div>
               )
             })}
           </div>
         )}
+        {photo && <img src={photo} alt="city photo" />}
       </div>
     </div>
   )
 }
 export default SearchBar
+
+

@@ -1,14 +1,14 @@
-import "./App.css";
-import HomePage from "./pages/HomePage";
-import BucketListView from "./pages/BucketListView";
-import DestinationDetails from "./pages/DestinationDetails";
-import LandingPage from "./pages/LandingPage";
-import LoginView from "./pages/LoginView";
-import RegistrationForm from "./pages/RegistrationForm";
-import ReviewView from "./pages/ReviewView";
-import { Routes, Route } from "react-router-dom";
-import React from "react";
-import axios from "axios";
+import './App.css'
+import HomePage from './pages/HomePage'
+import BucketListView from './pages/BucketListView'
+import DestinationDetails from './pages/DestinationDetails'
+import LandingPage from './pages/LandingPage'
+import LoginView from './pages/LoginView'
+import RegistrationForm from './pages/RegistrationForm'
+import ReviewView from './pages/ReviewView'
+import { Routes, Route } from 'react-router-dom'
+import React from 'react'
+// import axios from 'axios'
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/review:id" element={<ReviewView />} />
       </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

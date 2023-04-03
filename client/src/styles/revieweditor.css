@@ -15,5 +15,5 @@
   position: absolute;
   top: 32%;
   width: 100%;
-  border-radius: 45px;
+  border-radius: 45px 45px 0 0;
 }

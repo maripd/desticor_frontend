@@ -11,11 +11,20 @@
 
 .card {
   background: rgb(255, 253, 253, 0.5);
-  width: 350px;
+  width: 330px;
   height: 270px;
   border-radius: 16px;
-  margin-top: 360px;
+  margin-top: 300px;
 }
+
+.registerform-card {
+  background: rgb(255, 253, 253, 0.5);
+  width: 330px;
+  height: 360px;
+  border-radius: 16px;
+  margin-top: 300px;
+}
+
 .info {
   margin-top: 33px;
   padding: 30px;
@@ -30,7 +39,7 @@
   gap: 10px;
 }
 
-.login-btn {
+.login-btn, .register-btn {
   padding: 10px;
   width: 100px;
   border-radius: 4px;
@@ -56,5 +65,4 @@
   border: none;
   text-align: center;
   font-size: 14px;
-
 }

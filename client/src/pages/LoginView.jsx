@@ -25,7 +25,7 @@ const LoginView = () => {
   return (
     <>
       <div className="bgc">
-        <form className="card">
+        <form className="card" onSubmit={handleSubmit}>
           <div className="info">
             <input
               type="email"

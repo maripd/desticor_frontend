@@ -1,0 +1,51 @@
+#intro-blurb {
+  font-family: arial;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+#blurbsearch-container {
+  text-align: left;
+  margin: 30px;
+}
+
+#search-input {
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(211, 210, 210, 0.411);
+  box-shadow: 4px 5px 4px rgba(246, 245, 245, 0.61);
+  background-image: url("https://i.imgur.com/WA3wqnM.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
+
+
+
+#searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.suggested-city {
+  margin: 11px auto;
+}
+
+.suggested-city:hover {
+  background-color: pink;
+  font: arial;
+}
+
+.search-panel {
+  border-radius:15px;
+  text-align: center;
+  margin-top:3px;
+  background-color: rgba(250, 230, 233, 0.771);
+}

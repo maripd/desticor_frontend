@@ -33,6 +33,7 @@ const LoginView = () => {
               value={emailAddress}
               onChange={(e) => setEmailAddress(e.target.value)}
               placeholder="email"
+              className="login-input"
             />
             <input
               type="password"
@@ -40,17 +41,18 @@ const LoginView = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="password"
+              className="login-input"
             />
           </div>
 
           <div className="btn">
-            <button onClick={(e) => handleSubmit(e)}>Log In</button>
+            <button onClick={(e) => handleSubmit(e)} className="login-btn">Log In</button>
 
-            <button onClick={() => navigate("/landingpage")}>Cancel</button>
-            <p>
-              <Link to="/register">Create an Account</Link>
-            </p>
+            <button onClick={() => navigate("/landingpage")} className="login-btn">Cancel</button>
           </div>
+          <p className="login-text">
+              <Link to="/register" className="login-url">Create an Account</Link>
+            </p>
         </form>
       </div>
     </>

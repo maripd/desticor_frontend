@@ -14,3 +14,19 @@
   width: auto;
   color: black;
 }
+
+.review-img {
+  width:100%;
+  height:300px;
+}
+
+.destination-name {
+  margin-top: 10px;
+}
+.content-container {
+  background-color: rgb(247, 208, 215);
+  position: absolute;
+  top: 32%;
+  width: 100%;
+  border-radius: 45px 45px 0 0;
+}

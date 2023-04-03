@@ -1,5 +1,5 @@
 import "./App.css";
-import Homepage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 import BucketListView from "./pages/BucketListView";
 import DestinationDetails from "./pages/DestinationDetails";
 import LandingPage from "./pages/LandingPage";

@@ -4,10 +4,14 @@ import "../styles/revieweditor.css";
 const ReviewView = () => {
   return (
     <>
-      <div>review page background image here</div>
-      <div>destination name here</div>
-      <div className="editor-container">
+      <div className="reviewimg-container">
+        <img src="https://i.imgur.com/nqrqRHi.png" className="review-img" />
+      </div>
+      <div className="content-container">
+        <h4 className="destination-name">Destination Name Here</h4>
+        <div className="editor-container">
         <Editor />
+      </div>
       </div>
     </>
   );

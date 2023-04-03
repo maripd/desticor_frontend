@@ -7,7 +7,6 @@
 }
 
 #blurbsearch-container {
-  text-align: left;
   margin: 30px;
 }
 
@@ -18,14 +17,12 @@
   border: none;
   background-color: rgba(211, 210, 210, 0.411);
   box-shadow: 4px 5px 4px rgba(246, 245, 245, 0.61);
-  background-image: url("https://i.imgur.com/WA3wqnM.png");
+  background-image: url('https://i.imgur.com/WA3wqnM.png');
   background-size: 25px 25px;
   background-repeat: no-repeat;
   background-position: right;
   background-origin: content-box;
 }
-
-
 
 #searchbar-container {
   display: flex;
@@ -36,6 +33,7 @@
 
 .suggested-city {
   margin: 11px auto;
+  font-weight: 500;
 }
 
 .suggested-city:hover {
@@ -44,8 +42,13 @@
 }
 
 .search-panel {
-  border-radius:15px;
+  position: absolute;
+  border-radius: 15px;
   text-align: center;
-  margin-top:3px;
-  background-color: rgba(250, 230, 233, 0.771);
+  margin: 234px 30px auto auto;
+  background-color: rgba(250, 230, 233, 0.864);
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }

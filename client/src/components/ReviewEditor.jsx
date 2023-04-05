@@ -4,10 +4,10 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 const Editor = () => {
   return (
     <div>
-      <h2>CKEditor 5 React App</h2>
+      <h2>Notes</h2>
       <CKEditor
         editor={ClassicEditor}
-        data="<p>Hello from CKEditor 5!</p>"
+        data="<p>My destination notes</p>"
         onReady={(editor) => {
           console.log("CKEditor5 React Component is ready to use!", editor);
         }}

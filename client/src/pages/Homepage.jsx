@@ -1,9 +1,12 @@
 import '../styles/homepage.css'
 import HeaderLogoNav from '../components/HeaderLogoNav'
 import MostPopular from '../components/MostPopular'
-import BucketList from '../components/BucketList'
+import BucketListItem from '../components/BucketListItem'
 import AddBucketList from '../components/AddBucketList'
 import SearchBar from '../components/SearchBar'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
 
 const mockData = [
   {
@@ -32,40 +35,30 @@ const mockData = [
   }
 ]
 
-const bucketListData = [
-  {
-    img: 'https://i.imgur.com/QZIXUe7.png',
-    location: 'England'
-  },
-  {
-    img: 'https://i.imgur.com/cHvMxmP.png',
-    location: 'Indonesia'
-  },
-  {
-    img: 'https://i.imgur.com/k45oJbR.png',
-    location: 'Thailand'
-  },
-  {
-    img: 'https://i.imgur.com/g9d4P5b.png',
-    location: 'South Korea'
-  },
-  {
-    img: 'https://i.imgur.com/US1QuTn.png',
-    location: 'China'
-  },
-  {
-    img: 'https://i.imgur.com/bzOxL6z.png',
-    location: 'Japan'
-  }
-]
-
 const HomePage = () => {
+  const [bucketList, setBucketList] = useState([])
+  // [ {  } ]
+
+  const handleAddSubmit = (bucketItem) => {
+    setBucketList(prevBucketList => [...prevBucketList, bucketItem])
+
+  }
+  console.log(bucketList)
+
+  useEffect(() => {
+    const getAllBuckets = async () => {
+      const response = await axios.get('http://localhost:3001/getallbuckets')
+      setBucketList(response.data.allBuckets)
+    }
+    getAllBuckets()
+  }, [])
+
   return (
     <div>
       <header id="header-container">
         <HeaderLogoNav />
       </header>
-      <SearchBar />
+      <SearchBar bucketList={bucketList}/>
 
 
       <div id="mostpopular-container">
@@ -85,14 +78,15 @@ const HomePage = () => {
             My Bucket List
           </p>
           <p id="plus-sign">+</p>
-          <AddBucketList/>
+          <AddBucketList onBucketItemSubmit={handleAddSubmit}/>
         </div>
 
         
         <ul className="cardsandname-container" id="card-img">
-          {bucketListData.map((bucketItem) => {
+          {bucketList.map((bucketItem) => {
+            console.log("LOG BUCKET ITEM",bucketItem)
             return (
-              <BucketList img={bucketItem.img} location={bucketItem.location} />
+              <BucketListItem bucketListName={bucketItem.bucketListName} />
             )
           })}
         </ul>

@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Desticor MERN Project 
+#### Date Started: March 2, 2023
+#### Deadline: April 19, 2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By: Jasmin Carter & Marissa Dilig
 
-## Available Scripts
+## [My Github](https://github.com/maripd/desticor_frontend) ,(https://github.com/maripd/desticor_backend)| [My Linkedin] (https://www.linkedin.com/in/jasmin-carter/)(https://www.linkedin.com/in/marissa-dilig-6ba71923a/) | [Trello](https://trello.com/b/51foy0nd/peer-group-project)|
 
-In the project directory, you can run:
+![Desticor](https://i.imgur.com/w4hrLAL.png)
 
-### `npm start`
+##### **Description**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Welcome to our Desticor project! This project aims to showcase our dream travel destinations from around the world that we hope to visit in our lifetime! This project features a collection of photos, descriptions, reviews or interesting facts about each destination.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### This project is built using the MERN stack (MongoDB, Express, React, and Node.js). The UX/UI design was conceptualized and visualized using wireframes, component hierarchy, and entity relationship diagrams to map both client-side and server functionalities. The project includes Rest APIs based on CRUD operations that enable the creation, retrieval, updating/saving, and deletion of reminder and job application cards. A progress bar has also been integrated to track the status of job applications. Overall, this project demonstrates proficiency in developing full-stack web applications using the MERN stack.
 
-### `npm test`
+### Currently, authentication and other major functionalities are being built. Watch out for the final result. Thanks for checking out our project! 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Credits:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### [Github](github.com) | W3school | MDN Docs | FreeCodeCamp | MongoDB Documentation | ChatGPT | Stackoverflow | 

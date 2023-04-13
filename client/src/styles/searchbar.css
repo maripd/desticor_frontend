@@ -42,13 +42,123 @@
 }
 
 .search-panel {
-  position: absolute;
   border-radius: 15px;
   text-align: center;
-  margin: 234px 30px auto auto;
   background-color: rgba(250, 230, 233, 0.864);
-  width: 330px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   z-index: 1;
 }
+
+#photo-data {
+  border-radius: 10px;
+  align-self: center;
+}
+
+#photodata-container {
+  position: relative;
+  width: fit-content;
+  align-self: center;
+}
+
+.bucketlistname-dropdown {
+  position: relative;
+  z-index: 1;
+}
+
+#savebucket-btn {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  background-color: rgb(242, 197, 197);
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  margin: auto 3px;
+}
+
+.dropdown-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 60px;
+  top: 24px;
+}
+
+.bucket-title {
+  position: absolute;
+  top: 24px;
+  width: 30px;
+  color: white;
+  margin: auto 20px;
+  font-size: 16px;
+}
+
+.bucketdropdown-panel {
+  padding: 15px 10px;
+  list-style-type: none;
+  position: absolute;
+  z-index: 1000;
+  top: 21%;
+  left: -27%;
+  width: 350px;
+  height: 450px;
+  background-color: rgb(247 228 228);
+  border-radius: 20px;
+  overflow-x: scroll;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0;
+  overflow-x: scroll;
+}
+
+.dropdown-text {
+  /* margin: 0 auto; */
+  /* align-content: center; */
+  z-index: 1000;
+  font-size: 17px;
+  font-weight:800;
+  color: rgb(40, 39, 39);
+  
+}
+
+.dropdown-img {
+  margin: 0 15px;
+  /* align-content: center; */
+  width: 80px;
+  height: 90px;
+  border-radius: 10px;
+  display: block;
+  z-index: 1000;
+}
+
+.dropdown-save {
+ padding: 13px;
+ position: absolute;
+ right: 5%;
+ border: none;
+ border-radius: 14px;
+ background-color: rgb(242, 197, 197);
+}
+
+.dropdownsave-container {
+height: 43px;
+}
+
+/* #bucketlist-btn {
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+} */
+

@@ -12,8 +12,6 @@
 
 ### Welcome to our Desticor project! This project aims to showcase our dream travel destinations from around the world that we hope to visit in our lifetime! This project features a collection of photos, descriptions, reviews or interesting facts about each destination.
 
-### This project is built using the MERN stack (MongoDB, Express, React, and Node.js). The UX/UI design was conceptualized and visualized using wireframes, component hierarchy, and entity relationship diagrams to map both client-side and server functionalities. The project includes Rest APIs based on CRUD operations that enable the creation, retrieval, updating/saving, and deletion of reminder and job application cards. A progress bar has also been integrated to track the status of job applications. Overall, this project demonstrates proficiency in developing full-stack web applications using the MERN stack.
-
 ### Currently, authentication and other major functionalities are being built. Watch out for the final result. Thanks for checking out our project! 
 
 

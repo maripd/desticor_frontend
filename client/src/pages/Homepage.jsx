@@ -37,7 +37,6 @@ const mockData = [
 
 const HomePage = () => {
   const [bucketList, setBucketList] = useState([])
-  // [ {  } ]
 
   const handleAddSubmit = (bucketItem) => {
     setBucketList(prevBucketList => [...prevBucketList, bucketItem])

@@ -113,6 +113,10 @@
   overflow-x: scroll;
 }
 
+.hide {
+  display: none;
+}
+
 .dropdown-list {
   display: flex;
   flex-direction: row;
@@ -128,7 +132,6 @@
   font-size: 17px;
   font-weight:800;
   color: rgb(40, 39, 39);
-  
 }
 
 .dropdown-img {
@@ -153,6 +156,7 @@
 .dropdownsave-container {
 height: 43px;
 }
+
 
 /* #bucketlist-btn {
   width: 250px;

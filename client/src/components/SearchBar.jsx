@@ -19,6 +19,8 @@ const SearchBar = ({ bucketList }) => {
   const [predictions, setPredictions] = useState([])
   const [photo, setPhoto] = useState(null)
   const [cityData, setCityData] = useState(null)
+  const [panelState, setPanelState] = useState(false)
+  
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -59,6 +61,28 @@ const SearchBar = ({ bucketList }) => {
     )
   }
 
+  const handleArrowClick = (e) => {
+    if (panelState === false) {
+      setPanelState(true)
+    } else {
+      setPanelState(false)
+    }
+  }
+  console.log(panelState)
+  let panelDisplay = 'hide'
+  if (panelState === true) {
+    panelDisplay = ''
+  }
+
+  const handleSaveButton = (e) => {
+    if (panelState === true) {
+      setPanelState(false)
+    } else {
+      setPanelState(true)
+    }
+  }
+  
+
   return (
     <div id="blurbsearch-container">
       <p id="intro-blurb">
@@ -98,12 +122,13 @@ const SearchBar = ({ bucketList }) => {
               <img
                 src="https://i.imgur.com/Gl9m7pe.png"
                 className="dropdown-icon"
+                onClick={handleArrowClick}
               />
               <button id="savebucket-btn">Save</button>
             </form>
             <img src={photo} alt="city photo" id="photo-data" />
 
-            <ul className="bucketdropdown-panel">
+            <ul className={`bucketdropdown-panel ${panelDisplay}`}>
               {bucketList.map((bucketItem) => {
                 return (
                   <li className="dropdown-list">
@@ -114,8 +139,7 @@ const SearchBar = ({ bucketList }) => {
                     <h6 className="dropdown-text">{bucketItem.bucketListName}</h6>
                     
                     <div className="dropdownsave-container">
-                    <button className="dropdown-save">Save</button>
-
+                    <button type="submit" className="dropdown-save" onClick={handleSaveButton}>Save</button>
                     </div>
                   </li>
                 )

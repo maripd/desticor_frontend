@@ -20,27 +20,23 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validate inputs before submitting
-    if (firstName.trim() === "") {
+    if (firstName === "") {
       setFirstNameError("First name is required");
-      return;
     } else {
       setFirstNameError("");
     }
-    if (lastName.trim() === "") {
+    if (lastName === "") {
       setLastNameError("Last name is required");
-      return;
     } else {
       setLastNameError("");
     }
-    if (emailAddress.trim() === "") {
+    if (emailAddress === "") {
       setEmailAddressError("Email address is required");
-      return;
     } else {
       setEmailAddressError("");
     }
-    if (password.trim() === "") {
+    if (password === "") {
       setPasswordError("Password is required");
-      return;
     } else {
       setPasswordError("");
     }

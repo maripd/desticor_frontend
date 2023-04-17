@@ -1,5 +1,6 @@
 import "../styles/landingPage.css";
 import React from "react";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <>
@@ -11,12 +12,12 @@ const LandingPage = () => {
         </div>
 
         <div className="over">
-          <a href="/loginview">
+          <Link to="/login">
             <button className="logbtn">Login</button>
-          </a>
-          <a href="/register" id="reg">
+          </Link>
+          <Link to="/register" id="reg">
             create an account
-          </a>
+          </Link>
         </div>
       </div>
     </>

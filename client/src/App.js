@@ -16,11 +16,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/destinationdetails:id" element={<DestinationDetails />} />
-        <Route path="/bucketlistview:id" element={<BucketListView />} />
+        <Route path="/bucketlistview/:id" element={<BucketListView />} />
         <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/loginview" element={<LoginView />} />
         <Route path="/register" element={<RegistrationForm />} />
-        <Route path="/review:id" element={<ReviewView />} />
       </Routes>
     </div>
   )

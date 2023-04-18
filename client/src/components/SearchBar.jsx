@@ -13,13 +13,11 @@ const SearchBar = ({ bucketList }) => {
   // props.bucketList.map()
   // props.something
   // or bucketList.map()
-  // or something
-
   const [inputValues, setInput] = useState('')
   const [predictions, setPredictions] = useState([])
   const [photo, setPhoto] = useState(null)
-  const [cityData, setCityData] = useState(null)
   const [panelState, setPanelState] = useState(false)
+
   
 
   const handleChange = (e) => {
@@ -29,7 +27,7 @@ const SearchBar = ({ bucketList }) => {
     autocompleteService.getPlacePredictions(
       { input: e.target.value, types: ['(cities)'] },
       (predictions) => {
-        console.log(predictions)
+        console.log('THIS IS THE PREDICTION',predictions)
         // if predictions value is not null, then set the predictions
         // since there's no else, it will stay as is
         // filter out impurities early in your logic
@@ -51,6 +49,7 @@ const SearchBar = ({ bucketList }) => {
           place.photos &&
           place.photos.length > 0
         ) {
+          const placeName = place.name
           const photoUrl = place.photos[0].getUrl({
             maxWidth: 250,
             maxHeight: 300
@@ -74,13 +73,29 @@ const SearchBar = ({ bucketList }) => {
     panelDisplay = ''
   }
 
-  const handleSaveButton = (e) => {
+  const handleDropdownSaveButton = async (e, bucketItem) => {
+    e.preventDefault()
+    
+
+    const destinationData = {
+      destinationDesc: inputValues,
+      destinationImage: photo,
+      bucketListId: bucketItem._id
+    }
+    console.log('This is line 85 on searchbar', destinationData)
+    const response = await axios.post(`http://localhost:3001/createdestination`, destinationData)
+    console.log('This is Line 81', panelState)
+    
+    setInput('')
+    setPhoto('')
     if (panelState === true) {
       setPanelState(false)
     } else {
       setPanelState(true)
     }
   }
+
+  
   
 
   return (
@@ -124,12 +139,13 @@ const SearchBar = ({ bucketList }) => {
                 className="dropdown-icon"
                 onClick={handleArrowClick}
               />
-              <button id="savebucket-btn">Save</button>
+              <button id="savebucket-btn" type="submit">Save</button>
             </form>
             <img src={photo} alt="city photo" id="photo-data" />
 
             <ul className={`bucketdropdown-panel ${panelDisplay}`}>
               {bucketList.map((bucketItem) => {
+                console.log('This is line 47 earch bar', bucketItem)
                 return (
                   <li className="dropdown-list">
                     <img
@@ -139,7 +155,7 @@ const SearchBar = ({ bucketList }) => {
                     <h6 className="dropdown-text">{bucketItem.bucketListName}</h6>
                     
                     <div className="dropdownsave-container">
-                    <button type="submit" className="dropdown-save" onClick={handleSaveButton}>Save</button>
+                    <button type="submit" className="dropdown-save" onClick={(e) => handleDropdownSaveButton(e, bucketItem)}>Save</button>
                     </div>
                   </li>
                 )
@@ -147,7 +163,8 @@ const SearchBar = ({ bucketList }) => {
             </ul>
           </div>
         )}
-        {cityData && <div id="cityname-data">{setCityData}</div>}
+        {inputValues && <div id="cityname-data">{inputValues}</div>}
+       { console.log('this is citydata', inputValues, photo) }
       </div>
     </div>
   )

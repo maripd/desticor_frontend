@@ -42,7 +42,9 @@ const HomePage = () => {
     setBucketList(prevBucketList => [...prevBucketList, bucketItem])
 
   }
-  console.log(bucketList)
+  console.log('THIS IS BUCKETLIST STATE', bucketList)
+
+
 
   useEffect(() => {
     const getAllBuckets = async () => {
@@ -52,10 +54,12 @@ const HomePage = () => {
     getAllBuckets()
   }, [])
 
+ 
+
   return (
     <div>
       <header id="header-container">
-        <HeaderLogoNav />
+      <HeaderLogoNav />
       </header>
       <SearchBar bucketList={bucketList}/>
 
@@ -77,15 +81,14 @@ const HomePage = () => {
             My Bucket List
           </p>
           <p id="plus-sign">+</p>
-          <AddBucketList onBucketItemSubmit={handleAddSubmit}/>
+          <AddBucketList onBucketItemSubmit={handleAddSubmit} />
         </div>
 
-        
         <ul className="cardsandname-container" id="card-img">
           {bucketList.map((bucketItem) => {
             console.log("LOG BUCKET ITEM",bucketItem)
             return (
-              <BucketListItem bucketListName={bucketItem.bucketListName} />
+              <BucketListItem bucketListName={bucketItem.bucketListName} id={bucketItem._id} bucketId={bucketItem._id}/>
             )
           })}
         </ul>

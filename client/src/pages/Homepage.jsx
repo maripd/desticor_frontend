@@ -1,65 +1,61 @@
-import '../styles/homepage.css'
-import HeaderLogoNav from '../components/HeaderLogoNav'
-import MostPopular from '../components/MostPopular'
-import BucketListItem from '../components/BucketListItem'
-import AddBucketList from '../components/AddBucketList'
-import SearchBar from '../components/SearchBar'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-
+import "../styles/homepage.css";
+import HeaderLogoNav from "../components/HeaderLogoNav";
+import MostPopular from "../components/MostPopular";
+import BucketListItem from "../components/BucketListItem";
+import AddBucketList from "../components/AddBucketList";
+import SearchBar from "../components/SearchBar";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const mockData = [
   {
-    img: 'https://i.imgur.com/8IkVUkp.png',
-    location: 'Denmark'
+    img: "https://i.imgur.com/8IkVUkp.png",
+    location: "Denmark"
   },
   {
-    img: 'https://i.imgur.com/YGXG1vC.png',
-    location: 'Japan'
+    img: "https://i.imgur.com/YGXG1vC.png",
+    location: "Japan"
   },
   {
-    img: 'https://i.imgur.com/D9jYbbs.png',
-    location: 'Switzerland'
+    img: "https://i.imgur.com/D9jYbbs.png",
+    location: "Switzerland"
   },
   {
-    img: 'https://i.imgur.com/8IkVUkp.png',
-    location: 'Denmark'
+    img: "https://i.imgur.com/8IkVUkp.png",
+    location: "Denmark"
   },
   {
-    img: 'https://i.imgur.com/YGXG1vC.png',
-    location: 'Japan'
+    img: "https://i.imgur.com/YGXG1vC.png",
+    location: "Japan"
   },
   {
-    img: 'https://i.imgur.com/D9jYbbs.png',
-    location: 'Switzerland'
+    img: "https://i.imgur.com/D9jYbbs.png",
+    location: "Switzerland"
   }
-]
+];
 
 const HomePage = () => {
-  const [bucketList, setBucketList] = useState([])
-  // [ {  } ]
+  const [bucketList, setBucketList] = useState([]);
 
   const handleAddSubmit = (bucketItem) => {
-    setBucketList(prevBucketList => [...prevBucketList, bucketItem])
-
-  }
-  console.log(bucketList)
+    setBucketList((prevBucketList) => [...prevBucketList, bucketItem]);
+  };
+  console.log(bucketList);
 
   useEffect(() => {
     const getAllBuckets = async () => {
-      const response = await axios.get('http://localhost:3001/getallbuckets')
-      setBucketList(response.data.allBuckets)
-    }
-    getAllBuckets()
-  }, [])
+      const response = await axios.get("http://localhost:3001/getallbuckets");
+      setBucketList(response.data.allBuckets);
+    };
+    getAllBuckets();
+  }, []);
 
   return (
     <div>
       <header id="header-container">
         <HeaderLogoNav />
       </header>
-      <SearchBar bucketList={bucketList}/>
-
+      <SearchBar bucketList={bucketList} />
 
       <div id="mostpopular-container">
         <p className="section-title">Most Popular</p>
@@ -67,7 +63,7 @@ const HomePage = () => {
           {mockData.map((mockItem) => {
             return (
               <MostPopular img={mockItem.img} location={mockItem.location} />
-            )
+            );
           })}
         </ul>
       </div>
@@ -78,21 +74,20 @@ const HomePage = () => {
             My Bucket List
           </p>
           <p id="plus-sign">+</p>
-          <AddBucketList onBucketItemSubmit={handleAddSubmit}/>
+          <AddBucketList onBucketItemSubmit={handleAddSubmit} />
         </div>
 
-        
         <ul className="cardsandname-container" id="card-img">
           {bucketList.map((bucketItem) => {
-            console.log("LOG BUCKET ITEM",bucketItem)
+            console.log("LOG BUCKET ITEM", bucketItem);
             return (
               <BucketListItem bucketListName={bucketItem.bucketListName} />
-            )
+            );
           })}
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

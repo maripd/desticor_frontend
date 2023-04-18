@@ -19,11 +19,11 @@
   text-align: left;
   flex-direction: column;
   position: relative;
-  top: 10%;
+  /* top: 5%; */
 }
 
 .intro-name {
-  margin: 500px 0 20px 30px;
+  margin: 470px 0 20px 30px;
   font-size: 60px;
   padding: 0;
 }
@@ -36,9 +36,7 @@
 .over {
   display: flex;
   flex-direction: column;
-  margin: 100px;
 }
-
 
 /* .intro {
   margin-top: 400px;

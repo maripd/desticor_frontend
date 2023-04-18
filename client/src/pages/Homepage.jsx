@@ -1,39 +1,38 @@
-import '../styles/homepage.css'
-import HeaderLogoNav from '../components/HeaderLogoNav'
-import MostPopular from '../components/MostPopular'
-import BucketListItem from '../components/BucketListItem'
-import AddBucketList from '../components/AddBucketList'
-import SearchBar from '../components/SearchBar'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-
+import "../styles/homepage.css";
+import HeaderLogoNav from "../components/HeaderLogoNav";
+import MostPopular from "../components/MostPopular";
+import BucketListItem from "../components/BucketListItem";
+import AddBucketList from "../components/AddBucketList";
+import SearchBar from "../components/SearchBar";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const mockData = [
   {
-    img: 'https://i.imgur.com/8IkVUkp.png',
-    location: 'Denmark'
+    img: "https://i.imgur.com/8IkVUkp.png",
+    location: "Denmark"
   },
   {
-    img: 'https://i.imgur.com/YGXG1vC.png',
-    location: 'Japan'
+    img: "https://i.imgur.com/YGXG1vC.png",
+    location: "Japan"
   },
   {
-    img: 'https://i.imgur.com/D9jYbbs.png',
-    location: 'Switzerland'
+    img: "https://i.imgur.com/D9jYbbs.png",
+    location: "Switzerland"
   },
   {
-    img: 'https://i.imgur.com/8IkVUkp.png',
-    location: 'Denmark'
+    img: "https://i.imgur.com/8IkVUkp.png",
+    location: "Denmark"
   },
   {
-    img: 'https://i.imgur.com/YGXG1vC.png',
-    location: 'Japan'
+    img: "https://i.imgur.com/YGXG1vC.png",
+    location: "Japan"
   },
   {
-    img: 'https://i.imgur.com/D9jYbbs.png',
-    location: 'Switzerland'
+    img: "https://i.imgur.com/D9jYbbs.png",
+    location: "Switzerland"
   }
-]
+];
 
 const HomePage = () => {
   const [bucketList, setBucketList] = useState([])
@@ -48,11 +47,11 @@ const HomePage = () => {
 
   useEffect(() => {
     const getAllBuckets = async () => {
-      const response = await axios.get('http://localhost:3001/getallbuckets')
-      setBucketList(response.data.allBuckets)
-    }
-    getAllBuckets()
-  }, [])
+      const response = await axios.get("http://localhost:3001/getallbuckets");
+      setBucketList(response.data.allBuckets);
+    };
+    getAllBuckets();
+  }, []);
 
  
 
@@ -61,8 +60,7 @@ const HomePage = () => {
       <header id="header-container">
       <HeaderLogoNav />
       </header>
-      <SearchBar bucketList={bucketList}/>
-
+      <SearchBar bucketList={bucketList} />
 
       <div id="mostpopular-container">
         <p className="section-title">Most Popular</p>
@@ -70,7 +68,7 @@ const HomePage = () => {
           {mockData.map((mockItem) => {
             return (
               <MostPopular img={mockItem.img} location={mockItem.location} />
-            )
+            );
           })}
         </ul>
       </div>
@@ -86,7 +84,7 @@ const HomePage = () => {
 
         <ul className="cardsandname-container" id="card-img">
           {bucketList.map((bucketItem) => {
-            console.log("LOG BUCKET ITEM",bucketItem)
+            console.log("LOG BUCKET ITEM", bucketItem);
             return (
               <BucketListItem bucketListName={bucketItem.bucketListName} id={bucketItem._id} bucketId={bucketItem._id}/>
             )
@@ -94,7 +92,7 @@ const HomePage = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

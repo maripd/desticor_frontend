@@ -94,7 +94,7 @@ const DestinationDetails = () => {
   }, [id])
 
   return (
-    <div id="destinationpage-container">
+    <div id="destinationpage-container" style={{backgroundImage:`url(${destinationData.destinationImage})`}}>
       <HeaderLogoNav />
       {destinationData && (
         <div>

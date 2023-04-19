@@ -75,8 +75,6 @@ const SearchBar = ({ bucketList }) => {
 
   const handleDropdownSaveButton = async (e, bucketItem) => {
     e.preventDefault()
-    
-
     const destinationData = {
       destinationDesc: inputValues,
       destinationImage: photo,
@@ -94,9 +92,6 @@ const SearchBar = ({ bucketList }) => {
       setPanelState(true)
     }
   }
-
-  
-  
 
   return (
     <div id="blurbsearch-container">

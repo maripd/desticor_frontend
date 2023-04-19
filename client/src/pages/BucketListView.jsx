@@ -13,8 +13,10 @@ const BucketListView = (props) => {
   let { id } = useParams()
   console.log('THIS IS LINE 14', id)
 
-  const handleCard = (e) => {
-    navigate(`/destinationdetails/${id}`)
+  const handleGetDestinationById = async (destinationId) => {
+    const response = await axios.get(`http://localhost:3001/getdestination/${destinationId}`)
+    console.log('This is line 18 bucketlistview', response.data)
+    navigate(`/destinationdetails/${destinationId}`)
   }
 
 useEffect(() => {
@@ -23,7 +25,7 @@ useEffect(() => {
     if (id !== undefined) {
       console.log('THIS IS LINE 24',`${id}`)
       let response = await axios.get(`http://localhost:3001/getalldestinations/${id}`)
-      console.log('Line 19 bucketlist view component!', response.data)
+      console.log('Line 28 bucketlist view component!', response.data)
       console.log('ALL DESTINATIONS', allDestinations)
       setAllDestinations(response.data.allDestinationsById)
     }
@@ -40,7 +42,7 @@ return (
     <h5 id="title">{props.bucketListName}</h5>
     <ul className="card-list">
      {allDestinations.map((destination) => (
-      <li  className="card-container" onClick={handleCard}>
+      <li  className="card-container" onClick={(e) => handleGetDestinationById(destination._id)}>
         <img src={destination.destinationImage} className="bucketlist-img"/>
         <p className="img-text">{destination.destinationDesc}</p>
       </li>

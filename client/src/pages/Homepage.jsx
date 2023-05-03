@@ -35,12 +35,15 @@ const mockData = [
 ];
 
 const HomePage = () => {
-  const [bucketList, setBucketList] = useState([]);
+  const [bucketList, setBucketList] = useState([])
 
   const handleAddSubmit = (bucketItem) => {
-    setBucketList((prevBucketList) => [...prevBucketList, bucketItem]);
-  };
-  console.log(bucketList);
+    setBucketList(prevBucketList => [...prevBucketList, bucketItem])
+
+  }
+  console.log('THIS IS BUCKETLIST STATE', bucketList)
+
+
 
   useEffect(() => {
     const getAllBuckets = async () => {
@@ -50,10 +53,12 @@ const HomePage = () => {
     getAllBuckets();
   }, []);
 
+ 
+
   return (
     <div>
       <header id="header-container">
-        <HeaderLogoNav />
+      <HeaderLogoNav />
       </header>
       <SearchBar bucketList={bucketList} />
 
@@ -81,8 +86,8 @@ const HomePage = () => {
           {bucketList.map((bucketItem) => {
             console.log("LOG BUCKET ITEM", bucketItem);
             return (
-              <BucketListItem bucketListName={bucketItem.bucketListName} />
-            );
+              <BucketListItem bucketListName={bucketItem.bucketListName} id={bucketItem._id} bucketId={bucketItem._id}/>
+            )
           })}
         </ul>
       </div>

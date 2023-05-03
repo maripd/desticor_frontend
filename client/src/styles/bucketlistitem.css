@@ -35,3 +35,11 @@
 #bucketlist-text {
   font-weight: bolder;
 }
+
+.delete-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+}

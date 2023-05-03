@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 
-const AddBucketList = ({ onBucketItemSubmit }) => {
+const AddBucketList = ({ onBucketItemSubmit}) => {
   const [bucketItem, setBucketItem] = useState('')
   
 
@@ -12,13 +12,19 @@ const handleSubmit = async (e) => {
   e.preventDefault()
   console.log('submit button was clicked!')
   const bucketItemObject = {
-    bucketListName: bucketItem,
+  bucketListName: bucketItem
   }
   const response = await axios.post( 'http://localhost:3001/createbucketlist', bucketItemObject)
+  //bucketItemObject.id --> adding id property and is assigned to response.data.newBucket._id
+  bucketItemObject._id = response.data.newBucket._id
+  console.log('This is the bucketItemObject ID', bucketItemObject._id)
   setBucketItem('')
+  // {
+  //   bucketListName: bucketItem, 
+  //   id: id
+  // }
   onBucketItemSubmit(bucketItemObject)
-  
-  console.log('TEST', bucketItem)
+  console.log('TEST', bucketItem, bucketItemObject._id)
 }
 
 const handleAddBucketName = (e) => {
